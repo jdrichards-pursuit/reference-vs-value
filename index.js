@@ -9,7 +9,7 @@
 // // boolean
 
 // let str = 'ballgame'
-// //this will evaluate to ballgame
+// //str1 will evaluate to ballgame
 // let str1 = str
 
 // console.log('str === str1:', str === str1)
@@ -23,7 +23,7 @@
 // console.log('str:', str)
 
 
-//how will this evaluate
+//how will this evaluate?
 // let isSunny = true;
 // let isHappy = isSunny;
 
@@ -69,6 +69,7 @@
 
 // console.log('myHobbies:', myHobbies, 'yourHobbies:',yourHobbies);
 
+//which will the answer be....?
 // ['playing video games'] party
 // ['playing video games', 'reading'] heart
 
@@ -94,11 +95,12 @@
   
 //   console.log(louie === jody);
 
+   // who has the right answer?
   //dan says false heart for the win
   // jahaad says true party
 
 
-  //What about hobbies
+  //What about the hobbies nested array?
 //   const louie = {
 //     name: "Louie James",
 //     hobbies: ["reading", "playing video games", "biking"],
@@ -179,8 +181,9 @@ obj.name = "JD"
 
 // let obj3 = {dogType:'Cavalier'}
 
-// //copies obj3 values into obj4
+// //obj4 is assigned to an empty object where we spread the values of copy 3 into the new object.
 // let obj4 = {...obj3}
+// obj5 is assigned to obj3. they are pointing to the same object in memory 
 // let obj5 = obj3
 
 // // console.log('obj4:', obj4)
@@ -191,7 +194,9 @@ obj.name = "JD"
 
 // //spread operator with arrays
 // let arr = [1,2,3]
+//arr1 is pointing to the same place in memory as arr
 // let arr1 = arr
+// arr2 is in it's own place in memory. a new array is created and we spread the values of arr into the new array
 // let arr2 = [...arr]
 
 // console.log('arr === arr1:', arr===arr1)
@@ -213,6 +218,9 @@ console.log(myPerson === myPerson2)
 //nested objects and arrays have not been copied so they will be true for equality
 // console.log(myPerson.address === myPerson2.address)
 
+
+//nested objects are automatically connected to the object that was copied in like on line 215
+// But we can key into the object and then do the same procedure as before. Create a new object or array, then spread the values from the old object or array into the new Object or array.
 myPerson2.favColors = [...myPerson.favColors]
 myPerson2.address = {...myPerson.address}
 let myPerson3 = myPerson2
@@ -220,7 +228,10 @@ let myPerson3 = myPerson2
 //these will now be false
 // console.log('after copy', myPerson.favColors === myPerson2.favColors)
 // console.log('after copy', myPerson.address === myPerson2.address)
+// this will be true
 // console.log('myPerson2 === myPerson3', myPerson2 === myPerson3)
+//this will be true because it is a primitive value
 console.log('myPersonName === myPerson2Name ', myPerson.name === myPerson2.name )
 myPerson.name = 'Natasha'
+// this will be false because we changed one of the primitive values
 console.log('myPersonName === myPerson2Name ', myPerson.name === myPerson2.name )
